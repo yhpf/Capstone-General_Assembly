@@ -1,5 +1,4 @@
 # Capstone Project - The Mood of Music Around the Globe
----
 The Capstone Project is my final project from my Data Science Immersive program experience at General Assembly. 
 Key element in the project had to be:
 - Develop an interesting question
@@ -9,7 +8,6 @@ Key element in the project had to be:
 
 
 ## Description and target
----
 **Phase 1**
 For this project my goal is to see if happy, neutral or sad songs will be the most popular in a specific country. The mood of the song can be decided based on lyrics.(I will start with focusing on one region of the world.)
 
@@ -34,7 +32,6 @@ For phase 2 I will have to look for other data sources. I have seen suitable dat
 
 
 ## Tools (initial thoughts)
----
 - Clustering (K-means)
 - NLP
 - TextBlob 
@@ -42,7 +39,6 @@ For phase 2 I will have to look for other data sources. I have seen suitable dat
 
 
 ## Jupyter Notebook 1 - cleaning_top_songs
----
 This notebook include: 
 - Loading the data
 _ Looking at the data
@@ -50,7 +46,6 @@ _ Looking at the data
 
 
 ## Jupyter Notebook 2 - cleaning_lyrics
----
 This notebook include: 
 - Loading the data
 _ Looking at the data
@@ -58,7 +53,6 @@ _ Looking at the data
 
 
 ## Jupyter Notebook n
----
 There will be more Jupyter Notebooks.
 
 The next step is combine the top songs and the lyrics to one dataframe.
@@ -71,6 +65,5 @@ I will update this document as the project progresses.
 
 
 ## This is a working copy
----
 The project is still active and not finnished yet.
 So please keep that in mind. 
