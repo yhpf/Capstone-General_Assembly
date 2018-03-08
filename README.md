@@ -19,10 +19,10 @@ I will try to recommend songs based their mood similarities to other songs. (If 
 
 
 ## The Data
-**Initial data**
-Spotify world wide daily song ranking: 
-https://www.kaggle.com/edumucelli/spotifys-worldwide-daily-song-ranking/
-Song lyrics: 
+**Initial data**<BR />
+Spotify world wide daily song ranking:<BR /> 
+https://www.kaggle.com/edumucelli/spotifys-worldwide-daily-song-ranking/<BR />
+Song lyrics:<BR /> 
 https://www.kaggle.com/artimous/every-song-you-have-heard-almost/
 
 I think I will have to scrape some data. Because I have a feeling that some songs might be missing in the lyrics data.
