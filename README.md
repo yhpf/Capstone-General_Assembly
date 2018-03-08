@@ -19,7 +19,6 @@ I will try to recommend songs based their mood similarities to other songs. (If 
 
 
 ## The Data
----
 **Initial data**
 Spotify world wide daily song ranking: 
 https://www.kaggle.com/edumucelli/spotifys-worldwide-daily-song-ranking/
