@@ -40,8 +40,8 @@ For phase 2 I will have to look for other data sources. I have seen suitable dat
 ## Jupyter Notebook 1 - cleaning_top_songs
 This notebook include: 
 - Loading the data from csv-file
-_ Get to know the data & some initial fix
-- Save data to new csv-file
+- Get to know the data & some initial fix
+- Save data to new csv-file<BR />
 Status: first version done
 
 ### Get to know the data & some initial fix
@@ -100,8 +100,8 @@ Status: first version done
 ## Jupyter Notebook 2 - cleaning_lyrics
 This notebook include: 
 - Loading the data
-_ Looking at the data
-- Initial munging and EDA 
+- Looking at the data
+- Initial munging and EDA<BR /> 
 Status: in progress
 
 
