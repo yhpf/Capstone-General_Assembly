@@ -45,8 +45,8 @@ _ Get to know the data & some initial fix
 Status: first version done
 
 ### Get to know the data & some initial fix
-- Looked at entire df
-	Shape: (3441197, 7)
+- Looked at entire df<BR />
+	Shape: (3441197, 7)<BR />
 	Columns: Position, Track Name, Artist, Streams, URL, Date, Region
 
 		Position
@@ -56,12 +56,18 @@ Status: first version done
 		Track Name
 		- 657 missing values (rows was removed)
 		- Data type string
-		- Comment: I might want to decide not to use data from the Asian region since they have Artists and Track Names in foreign signs. I did choose to remove the rows with missing values bc I came to the conclusion that it would be impossible to fill them in with other values. 657 rows out of 3441197 are also very few and they seemes to be distributed over different regions.
+		- Comment: I might want to decide not to use data from the Asian region since they have Artists 
+		and Track Names in foreign signs. I did choose to remove the rows with missing values bc I came 
+		to the conclusion that it would be impossible to fill them in with other values. 657 rows out of 
+		3441197 are also very few and they seemes to be distributed over different regions.
 
 		Artist
 		- 657 missing values (rows was removed, same rowes as for Track Name)
 		- Data type string
-		- Comment: I might want to decide not to use data from the Asian region since they have Artists and Track Names in foreign signs. I did choose to remove the rows with missing values bc I came to the conclusion that it would be impossible to fill them in with other values. 657 rows out of 3441197 are also very few and they seemes to be distributed over different regions.
+		- Comment: I might want to decide not to use data from the Asian region since they have Artists 
+		and Track Names in foreign signs. I did choose to remove the rows with missing values bc I came 
+		to the conclusion that it would be impossible to fill them in with other values. 657 rows out of 
+		3441197 are also very few and they seemes to be distributed over different regions.
 
 		Streams
 		- No missing values
@@ -71,17 +77,24 @@ Status: first version done
 		- No missing values
 		- Data type string (was converted into datetime)
 		- 3 new columns created for Year, Month, Day
-		- There was data from 1 jan 2017 to 9 jan 2018. I removed the 9 days from 2018. I only want data for 2017.
+		- There was data from 1 jan 2017 to 9 jan 2018. I removed the 9 days from 2018. I only want data 
+		for 2017.
 
 		Region
 		- Column renamed to Country
 		- No missing values
 		- Data type string
-		- A new column (Region) was created featuring groups of countries, based on what continent they belong to.
-		- Comment: I did find a dictionary for what country each letter combination was exual to. (Is saves in the file contry_region_explanation). In the same file you can also see what countries go into what region. There is also a country that equals to global, which is for the world (my interpretation; all countries together). That column can be used to see if a specific region or country deviates a lot from what the rest of the world thinks. 
+		- A new column (Region) was created featuring groups of countries, based on what continent they 
+		belong to.
+		- Comment: I did find a dictionary for what country each letter combination was exual to. (Is saves 
+		in the file contry_region_explanation). In the same file you can also see what countries go into 
+		what region. There is also a country that equals to global, which is for the world (my interpretation; 
+		all countries together). That column can be used to see if a specific region or country deviates a 
+		lot from what the rest of the world thinks. 
 
-	New shape: (3355829, 11)
-	Columns: Position, Track Name, Artist, Streams, URL, Date, Year, Month, Day, Country, Region (the order of the columns also was changed)
+	New shape: (3355829, 11)<BR />
+	Columns: Position, Track Name, Artist, Streams, URL, Date, Year, Month, Day, Country, Region 
+	(the order of the columns also was changed)
 
 
 ## Jupyter Notebook 2 - cleaning_lyrics
