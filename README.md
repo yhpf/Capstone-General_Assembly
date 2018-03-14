@@ -38,11 +38,12 @@ For phase 2 I will have to look for other data sources. I have seen suitable dat
 
 
 ## Jupyter Notebook 1 - cleaning_top_songs
+Status: first version done
+
 This notebook include: 
 - Loading the data from csv-file
 - Get to know the data & some initial fix
 - Save data to new csv-file<BR />
-Status: first version done
 
 ### Get to know the data & some initial fix
 - Looked at entire df<BR />
@@ -88,21 +89,23 @@ Status: first version done
 		belong to.
 		- Comment: I did find a dictionary for what country each letter combination was exual to. (Is saves 
 		in the file contry_region_explanation). In the same file you can also see what countries go into 
-		what region. There is also a country that equals to global, which is for the world (my interpretation; 
-		all countries together). That column can be used to see if a specific region or country deviates a 
-		lot from what the rest of the world thinks. 
+		what region. There is also a country that equals to global, which is for the world (my 
+		interpretation; all countries together). That column can be used to see if a specific region or 
+		country deviates a lot from what the rest of the world thinks. 
 
 	New shape: (3355829, 11)<BR />
-	Columns: Position, Track Name, Artist, Streams, URL, Date, Year, Month, Day, Country, Region 
+	Columns: Position, Track Name, Artist, Streams, URL, Date, Year, Month, Day, Country, Region<BR /> 
 	(the order of the columns also was changed)
 
 
 ## Jupyter Notebook 2 - cleaning_lyrics
+Status: in progress
+
 This notebook include: 
 - Loading the data
 - Looking at the data
 - Initial munging and EDA<BR /> 
-Status: in progress
+
 
 
 ## Jupyter Notebook n
