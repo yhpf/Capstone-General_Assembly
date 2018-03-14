@@ -99,13 +99,29 @@ This notebook include:
 
 
 ## Jupyter Notebook 2 - cleaning_lyrics
-Status: in progress
+Status: first version done
 
 This notebook include: 
 - Loading the data
-- Looking at the data
-- Initial munging and EDA<BR /> 
+- Get to know the data
+- Save data to new csv-file<BR />
 
+### Get to know the data
+- Looked at data from 3 csv-files
+	ArtistURL (not using)<BR /> 
+	Lyrics1 
+	- Shape: 250000,3)<BR /> 
+	- Columns: Band, Lyrics, Song<BR /> 
+	- 1 missing value in Song
+	Lyrics2 
+	- Shape: 266174,3<BR /> 
+	- Column: Band, Lyrics, Song<BR /> 
+	- 7 missing values in Lyrics
+
+- The 2 data frames (lyric1 and lyric2) were combined into 1 new data frame named lyrics.
+- All the missing values were dropped.
+- '\r\n', '\n\n', '\r', '\n' were replaced with ' '
+- All text were converted to lowercase letters
 
 
 ## Jupyter Notebook n
