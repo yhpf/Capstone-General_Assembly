@@ -128,14 +128,32 @@ This notebook include:
 
 
 ## Jupyter Notebook 3 - combined_data
-Status: in progress
+Status: first version done
 
 This notebook include: 
 - Loading the data
 - Some light data munging
-- Combinding the different data sources into one data frame
+- Combinding songs and lyrics into one data frame
 - Save data to new csv-file<BR />
 
+
+## Jupyter Notebook 4 - spotify_api
+Status: first version done
+
+This notebook include: 
+- Get data from Spotify API
+- Use song URL from the data frame with songs and lyrics in
+- Save data to new csv-file<BR />
+
+
+## Jupyter Notebook 5 - combined_data2
+Status: in progress
+
+This notebook include: 
+- Loading the data (songs_lyrics + spotify_api_data)
+- Combinding songs and lyrics into one data frame
+- See for how many unique songs I have lyrics.
+- Save data to new csv-file<BR />
 
 ## Jupyter Notebook n
 There will be more Jupyter Notebooks.
