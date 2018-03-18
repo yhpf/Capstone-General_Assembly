@@ -23,7 +23,10 @@ I will try to recommend songs based their mood similarities to other songs. (If 
 Spotify world wide daily song ranking:<BR /> 
 https://www.kaggle.com/edumucelli/spotifys-worldwide-daily-song-ranking/<BR />
 Song lyrics:<BR /> 
-https://www.kaggle.com/artimous/every-song-you-have-heard-almost/
+https://www.kaggle.com/artimous/every-song-you-have-heard-almost/<BR />
+Additional song features from Spotify API (energy, mode, tempo, uri)<BR />
+https://developer.spotify.com/web-api
+
 
 I think I will have to scrape some data. Because I have a feeling that some songs might be missing in the lyrics data.
 
@@ -124,11 +127,20 @@ This notebook include:
 - All text were converted to lowercase letters
 
 
+## Jupyter Notebook 3 - combined_data
+Status: in progress
+
+This notebook include: 
+- Loading the data
+- Some light data munging
+- Combinding the different data sources into one data frame
+- Save data to new csv-file<BR />
+
+
 ## Jupyter Notebook n
 There will be more Jupyter Notebooks.
 
-The next step is combine the top songs and the lyrics to one dataframe.
-(Here I will also do a train test split on the data.)
+Do a train test split on the data.
 I will then do more munging and EDA on that data.
 Then comes the modeling and tuning.
 And in the end the concution and presentation.
