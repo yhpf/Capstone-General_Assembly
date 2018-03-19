@@ -7,7 +7,17 @@ Key element in the project had to be:
 - Communicat the findings to other data scientists and non-technical individuals. 
 
 
+## Business case
+In what of the top 10 music countries should a record label release a new artist?<BR />
+Based on the mood of the music and what music that is popular in the countries.
+
+
 ## Description and target
+
+**TARGET / Y**
+Happy, Sad, Neutral comes from the column Valence in the dataframe. Originaly commes from the Spotify API.
+The variable goes from 0 to 1. It describing the musical positiveness of the track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry). I need to decide upon what interval levels I will use for happy, neutral and sad (for example 0 <= sad < 0.40, 0.40 <= neutral < 0.60, 0.60 <= happy < 1.0). Use mood of a song to get mood of artist and mood of country.
+
 **Phase 1**
 For this project my goal is to see if happy, neutral or sad songs will be the most popular in a specific country. The mood of the song can be decided based on lyrics.(I will start with focusing on one region of the world.)
 
@@ -18,17 +28,25 @@ I will see if the mood of the top songs can determine other factors of a country
 I will try to recommend songs based their mood similarities to other songs. (If you like this song, you will probably like this song.)
 
 
+## Limitations
+- Top 10 music countries (exclude Asian countries due to other signs in written language)
+- Assumption: All songs in toplist can be considered popular. If a song is not in toplist, it is not popular.
+- Only songs in english
+- Only top 100 songs(?)
+
+
 ## The Data
 **Initial data**<BR />
 Spotify world wide daily song ranking:<BR /> 
 https://www.kaggle.com/edumucelli/spotifys-worldwide-daily-song-ranking/<BR />
 Song lyrics:<BR /> 
 https://www.kaggle.com/artimous/every-song-you-have-heard-almost/<BR />
-Additional song features from Spotify API (energy, mode, tempo, uri)<BR />
+Additional song features from Spotify API (energy, mode, tempo, uri etc.)<BR />
 https://developer.spotify.com/web-api
 
-
-I think I will have to scrape some data. Because I have a feeling that some songs might be missing in the lyrics data.
+**More data**<BR />
+Additional lyrics from Genius. Scraping through the API.<BR />
+https://docs.genius.com/
 
 For phase 2 I will have to look for other data sources. I have seen suitable data sets, so I just have to decide on what other factors to look at. 
 
@@ -37,7 +55,8 @@ For phase 2 I will have to look for other data sources. I have seen suitable dat
 - Clustering (K-means)
 - NLP
 - TextBlob 
-- Model evaluation
+- GLM
+- Random Forest
 
 
 ## Jupyter Notebook 1 - cleaning_top_songs
@@ -143,6 +162,7 @@ Status: first version done
 This notebook include: 
 - Get data from Spotify API
 - Use song URL from the data frame with songs and lyrics in
+- Get to know the variables available in the API https://developer.spotify.com/web-api/get-audio-features/
 - Save data to new csv-file<BR />
 
 
