@@ -166,6 +166,9 @@ And in the end the concution and presentation.
 I will update this document as the project progresses.
 
 
+## .gitignore
+This prevents checkpoints and csv-files from being commited and pushed to remote repo.
+
 ## This is a working copy
 The project is still active and not finnished yet.
 So please keep that in mind. 
