@@ -147,13 +147,33 @@ This notebook include:
 
 
 ## Jupyter Notebook 5 - combined_data2
-Status: in progress
+Status: first version done
 
 This notebook include: 
 - Loading the data (songs_lyrics + spotify_api_data)
 - Combinding songs and lyrics into one data frame
 - See for how many unique songs I have lyrics.
 - Save data to new csv-file<BR />
+
+
+## Jupyter Notebook 6 - get_more_lyrics
+Status: first version done
+
+This notebook include: 
+- Getting data from Genius using SPI and then web scraping
+- Save all data to new csv-file
+- Save unique song and lyrics to csv-file<BR />
+
+
+## Jupyter Notebook 7 - combined_data3
+Status: in progress
+
+This notebook include: 
+- Loading the data (songs_lyrics_api_data + genius_unique)
+- Combinding new lyrics into one data frame
+- ...
+- Save data to new csv-file<BR />
+
 
 ## Jupyter Notebook n
 There will be more Jupyter Notebooks.
