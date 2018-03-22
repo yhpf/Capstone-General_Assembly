@@ -186,13 +186,25 @@ This notebook include:
 
 
 ## Jupyter Notebook 7 - combined_data3
-Status: in progress
+Status: first version done
 
 This notebook include: 
 - Loading the data (songs_lyrics_api_data + genius_unique)
 - Combinding new lyrics into one data frame
 - ...
 - Save data to new csv-file<BR />
+
+
+## Jupyter Notebook 8 - top_8_countries
+Status: in progress
+
+This notebook include: 
+- Loading the data (latest version of combined data)
+- Looking at missing lyrics for all countries
+- Looking at missing lyrics for top 10 countries (top 8 without asia)
+- Looking at which songs appear most frequently
+- Manually add lyrics for the songs that appear more than 1000 times
+- ....<BR />
 
 
 ## Jupyter Notebook n
