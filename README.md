@@ -196,7 +196,7 @@ This notebook include:
 
 
 ## Jupyter Notebook 8 - top_8_countries
-Status: in progress
+Status: first version done
 
 This notebook include: 
 - Loading the data (latest version of combined data)
@@ -204,7 +204,23 @@ This notebook include:
 - Looking at missing lyrics for top 10 countries (top 8 without asia)
 - Looking at which songs appear most frequently
 - Manually add lyrics for the songs that appear more than 1000 times
-- ....<BR />
+- Save data to new csv-file<BR />
+
+
+## Jupyter Notebook 9 - mvp_mood_of_song
+Status: in progress
+
+This notebook include: 
+- Remove duplicated songs (removes rows)
+- Remove columns that might change per song (ex. position, streams, country etc.)
+- Looking at missing values - focus on the Lyrics column (the one with missing values are dropped later in this notebook)
+- Use TextBlob for the Lyrics column and sae result as 2 new column (Polarity and Subjectivity)
+- Do a quick check on the entire data frame
+- Performe a train/test-split
+- Do some more EDA
+- Define what is happy, neutral and sad
+- Model
+- ...<BR />
 
 
 ## Jupyter Notebook n
