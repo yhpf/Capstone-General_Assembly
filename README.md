@@ -208,7 +208,7 @@ This notebook include:
 
 
 ## Jupyter Notebook 9 - mvp_mood_of_song
-Status: in progress
+Status: first version done
 
 This notebook include: 
 - Remove duplicated songs (removes rows)
@@ -219,16 +219,37 @@ This notebook include:
 - Performe a train/test-split
 - Do some more EDA
 - Define what is happy, neutral and sad
-- Model
+- Model+tune
+- Look at the predictions
+
+
+## Jupyter Notebook 10 - better_model
+Status: in progress
+
+This notebook include: 
+- Do the same as in notebook 9
+- Performe a train/test-split
+- Befor modeling use CountVectorizer
+- ...
+- ...
+- Do some more EDA
+- Define what is happy, neutral and sad
+- Model+tune
 - ...<BR />
 
 
 ## Jupyter Notebook n
 There will be more Jupyter Notebooks.
 
-Do a train test split on the data.
-I will then do more munging and EDA on that data.
-Then comes the modeling and tuning.
+I will have use columns that I discarded in the MVP and I also need to do some feature engineering.
+
+Good model = more NLP on the Track Lyrics
+Better model = also looking at number of streams and position
+Best model = also looking at time on top list
+
+Then when we have the best model we can use our predictions and decide the mood of a country and the 
+mood of an artist. Then we can say what artist is suitable for what country.
+
 And in the end the concution and presentation.
 
 I will update this document as the project progresses.
