@@ -223,18 +223,25 @@ This notebook include:
 - Look at the predictions
 
 
-## Jupyter Notebook 10 - better_model
-Status: in progress
+## Jupyter Notebook 10 - good_model
+Status: first version done
 
 This notebook include: 
 - Do the same as in notebook 9
 - Performe a train/test-split
-- Befor modeling use CountVectorizer
-- ...
-- ...
-- Do some more EDA
-- Define what is happy, neutral and sad
-- Model+tune
+- CountVectorizer
+- Models (LinReg, LassoR, RFR)
+- TF-IDF
+- Models (LinReg, LassoR, RFR)
+- Evaluate<BR />
+
+
+## Jupyter Notebook 11 - better_model
+Status: in progress
+
+This notebook include: 
+- Do the same as in notebook 9
+
 - ...<BR />
 
 
