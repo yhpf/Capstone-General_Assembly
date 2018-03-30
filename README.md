@@ -31,7 +31,7 @@ I will try to recommend songs based their mood similarities to other songs. (If 
 ## Limitations
 - Top 10 music countries (exclude Asian countries due to other signs in written language)
 - Assumption: All songs in toplist can be considered popular. If a song is not in toplist, it is not popular.
-- Only songs in english
+- Only songs with roman characters (not asian signs for example)
 - Only top 100 songs(?)
 
 
@@ -229,6 +229,7 @@ Status: first version done
 This notebook include: 
 - Do the same as in notebook 9
 - Performe a train/test-split
+- Make list of stop words in eng, spa, ger, fre
 - CountVectorizer
 - Models (LinReg, LassoR, RFR)
 - TF-IDF
@@ -237,12 +238,14 @@ This notebook include:
 
 
 ## Jupyter Notebook 11 - better_model
-Status: in progress
+Status: first version done
 
 This notebook include: 
 - Do the same as in notebook 9
+- Use stop word list
+- CountVectorizer and TF-IDF
+- Model LassoR for every country
 
-- ...<BR />
 
 
 ## Jupyter Notebook n
@@ -251,8 +254,8 @@ There will be more Jupyter Notebooks.
 I will have use columns that I discarded in the MVP and I also need to do some feature engineering.
 
 Good model = more NLP on the Track Lyrics
-Better model = also looking at number of streams and position
-Best model = also looking at time on top list
+Better model = countries
+Best model = also looking at number of streams and position, also looking at time on top list
 
 Then when we have the best model we can use our predictions and decide the mood of a country and the 
 mood of an artist. Then we can say what artist is suitable for what country.
