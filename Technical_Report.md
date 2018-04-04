@@ -105,14 +105,58 @@ Train/Test-split -> EDA -> Best Model
 
 
 ### Data transformation before Best model per countrie
-Do the same thing as for BEst model but split the data into data for each country. 
+Do the same thing as for Best model but split the data into data for each country. 
 
 
 
 ## How you operationalized your outcome variable? (including your justification)
 
 
+
 ## Your choice of model and any hyperparameters, including what metric or metrics you use to determine a successful model.
+
+I knew that I needed to use a regressor of some kind. So I ended up using 5 different regressors in total. Before running the models I did use standard scaling in the case that scaling was needed. The Random Forest example do not need scaling before. 
+
+### Linear Regression
+Hyper params: N/A
+Evaluation metric: R2, MSE
+
+### Lasso Regressor
+Hyper params 
+Tuned: alpha, selection
+Tuned with both GridSearchCV and RandomizedSearchCV
+Pre-chosen by me: random_state=24, fit_intercept=True, normalize=False, max_iter=1000
+For the rest the default values were used.
+Evaluation metric: R2, MSE
+
+### Random Forest Regressor
+Hyper params
+Tuned: n_estimators, max_depth, max_features, bootstrap, verbose
+Tuned with RandomizedSearchCV (due to time restraints) 
+Pre-chosen by me: random_state=24
+For the rest the default values were used.
+Evaluation metric: R2, MSE
+
+### Ada Boosting Regressor (base estimator = DecisionTreeRegressor)
+Hyper params
+Tuned: n_estimators, loss
+Tuned with RandomizedSearchCV (due to time restraints) 
+Pre-chosen by me: random_state=24
+For the rest the default values were used.
+Evaluation metric: R2, MSE
+
+### Gradient Boosting Regressor
+Hyper params
+Tuned: n_estimators, loss, max_depth, max_features, verbose
+Tuned with RandomizedSearchCV (due to time restraints) 
+Pre-chosen by me: random_state=24
+For the rest the default values were used.
+Evaluation metric: R2, MSE
 
 
 ## Any future deployment strategies, additions of data, or modeling techniques you have yet to try?
+If there could have been more time I would have choosen to add in more data to try to see if it was possible
+to improve the quality of the predictions. If not I would probably change the target. To predict the mood 
+of a song seems to be hard. You do not have to use the mode to connect the song with an artist and the song 
+to a country for to see if the artist is a good fit with a country. There are probably better variables to 
+choose. I would definatly take some time to look at what those might be. 
