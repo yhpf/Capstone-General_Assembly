@@ -10,6 +10,8 @@ Key element in the project had to be:
 ## Business case
 In what of the top 10 music countries should a record label release a new artist?<BR />
 Based on the mood of the music and what music that is popular in the countries.
+(On the top 10 music countries 2 of them are asian countries. Since it is challenging to work with asian signs compares to roman signs I have decided that it is only going to be the to 8 music countries. I will exclude the 
+2 asian countries.)
 
 
 ## Description and target
@@ -19,50 +21,59 @@ Happy, Sad, Neutral comes from the column Valence in the dataframe. Originaly co
 The variable goes from 0 to 1. It describing the musical positiveness of the track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry). I need to decide upon what interval levels I will use for happy, neutral and sad (for example 0 <= sad < 0.40, 0.40 <= neutral < 0.60, 0.60 <= happy < 1.0). Use mood of a song to get mood of artist and mood of country.
 
 **Phase 1**
-For this project my goal is to see if happy, neutral or sad songs will be the most popular in a specific country. The mood of the song can be decided based on lyrics.(I will start with focusing on one region of the world.)
+MVP: I will try to predict if a song is happy, neutral or sad. 
+More improved models with more data.
 
 **Phase 2**
-I will see if the mood of the top songs can determine other factors of a country (Political situation, cultura exports, population etc.) 
+Determin the mood of an artist based on the songs made of the artist.
+Determin the mood of a country based on the songs popular in that country.
 
-**Phase 3**
-I will try to recommend songs based their mood similarities to other songs. (If you like this song, you will probably like this song.)
 
 
 ## Limitations
-- Top 10 music countries (exclude Asian countries due to other signs in written language)
-- Assumption: All songs in toplist can be considered popular. If a song is not in toplist, it is not popular.
+- Top 10 music countries (exclude 2 Asian countries due to other signs in written language)
 - Only songs with roman characters (not asian signs for example)
-- Only top 100 songs(?)
+- Assumption: All songs in toplist can be considered popular. If a song is not in toplist, it is not popular.
+- Only look at data for 2017.
 
 
 ## The Data
 **Initial data**<BR />
-Spotify world wide daily song ranking:<BR /> 
+- Spotify world wide daily song ranking:<BR /> 
 https://www.kaggle.com/edumucelli/spotifys-worldwide-daily-song-ranking/<BR />
-Song lyrics:<BR /> 
+- Song lyrics:<BR /> 
 https://www.kaggle.com/artimous/every-song-you-have-heard-almost/<BR />
-Additional song features from Spotify API (energy, mode, tempo, uri etc.)<BR />
-https://developer.spotify.com/web-api
 
 **More data**<BR />
-Additional lyrics from Genius. Scraping through the API.<BR />
+- Additional song features from Spotify API (energy, mode, tempo, uri etc.)<BR />
+https://developer.spotify.com/web-api
+- Additional lyrics from Genius. Scraping through the API.<BR />
 https://docs.genius.com/
+- Lyrics manually added.
 
-For phase 2 I will have to look for other data sources. I have seen suitable data sets, so I just have to decide on what other factors to look at. 
 
-
-## Tools (initial thoughts)
-- Clustering (K-means)
+## Tools (needs to be completed)
+- TextBlob
 - NLP
-- TextBlob 
-- GLM
-- Random Forest
+- Linear Regressor
+- Lasso Regressor
+- Random Forest Regressor
+- Ada Boosting Regressor
+- Gradient Boosting Regressor
+- GridSearchCV
+- RandomizedSearchCV
 
 
-## Technical Report 
+## Technical Report (separat md-file)
 Status: In progress
 
-- How to replicate the modeling process.
+How to replicate the modeling process.
+1. How did I acquired my data.
+2. How the data should be transformed.
+3. How I operationalized my outcome variable.
+4. How I choose my models and hyperparameters (also including what metric to use to determine if a model 
+successful or not).
+4. Any future deployment strategies, additions of data, or modeling techniques I have yet to try. 
 
 
 ## Jupyter Notebook 1 - cleaning_top_songs
@@ -132,6 +143,11 @@ Status: first version done
 This notebook include: 
 - Loading the data
 - Get to know the data
+- The data set were actually saved as 2 csv-files. I had to combined the 2 into one data frame to make 
+the work easier.
+- Drop rows were Song or Lyrics were missing. Extremely few. 
+- Clean the data from '\r\n', '\n\n', '\r', '\n'.
+- Make all the Lyrics into lower casing.
 - Save data to new csv-file<BR />
 
 ### Get to know the data
@@ -145,11 +161,6 @@ This notebook include:
 	- Shape: 266174,3<BR /> 
 	- Column: Band, Lyrics, Song<BR /> 
 	- 7 missing values in Lyrics
-
-- The 2 data frames (lyric1 and lyric2) were combined into 1 new data frame named lyrics.
-- All the missing values were dropped.
-- '\r\n', '\n\n', '\r', '\n' were replaced with ' '
-- All text were converted to lowercase letters
 
 
 ## Jupyter Notebook 3 - combined_data
@@ -178,6 +189,8 @@ Status: first version done
 This notebook include: 
 - Loading the data (songs_lyrics + spotify_api_data)
 - Combinding songs and lyrics into one data frame
+- Drop columns that are not going to be used
+- Drop rows that are duplicates
 - See for how many unique songs I have lyrics.
 - Save data to new csv-file<BR />
 
@@ -186,7 +199,7 @@ This notebook include:
 Status: first version done
 
 This notebook include: 
-- Getting data from Genius using SPI and then web scraping
+- Getting data from Genius using API and then web scraping
 - Save all data to new csv-file
 - Save unique song and lyrics to csv-file<BR />
 
@@ -196,8 +209,8 @@ Status: first version done
 
 This notebook include: 
 - Loading the data (songs_lyrics_api_data + genius_unique)
-- Combinding new lyrics into one data frame
-- ...
+- Combinding new lyrics into one data frame (consisting rows of the top 8 music countries 
+(US, UK, Germany,France, Canada,)
 - Save data to new csv-file<BR />
 
 
@@ -233,8 +246,7 @@ This notebook include:
 Status: first version done
 
 This notebook include: 
-- Do the same as in notebook 9
-- Performe a train/test-split
+- Do the same as in notebook 9 but add som NLP before modeling
 - Make list of stop words in eng, spa, ger, fre
 - CountVectorizer
 - Models (LinReg, LassoR, RFR)
@@ -247,53 +259,78 @@ This notebook include:
 Status: first version done
 
 This notebook include: 
-- Do the same as in notebook 9
+- Do the same as in notebook 10 but brooken down for each of the 8 countries
 - Use stop word list
 - CountVectorizer and TF-IDF
 - Model LassoR for every country
+- Evaluate<BR />
 
 
 ## Jupyter Notebook 12 - best_model
 Status: in progress
 
 This notebook include: 
--
--
--
+- Do the same things as for the MVP (notebook 9). But stop before you drop the columns that may change for a 
+song on different rows. 
+- Get dummies for the 8 countries.
+- Get dummies for the position column.
+- Group by the column ID and summarize the rows together that are grouped. 
+- Create an average streams column.
+- Create an average position column.
+- Drop duplicates.
+- Drop columns that before might changed per song (per row)
+- Put all the new columns into the data frame consisting of the 8 countries and the columns that would not 
+change per song (per row): 'Position', 'Streams', 'Date', 'Year', 'Month', 'Day', 'Country', 'Region'.
+- Drop rows with missing values in the Lyrics column.
+- Use TextBlob on the Lyrics column to get 2 new columns for Polarity and Subjectivity.
+- Performe a train/test-split
+- Do some more EDA
+- Use stop word list
+- CountVectorizer
+- Models (LinReg, LassoR, RFR, AdaBoost, GradientBoost)
+- TF-IDF
+- Models (LinReg, LassoR, RFR, AdaBoost, GradientBoost)
+- Evaluate<BR />
 
 
 ## Jupyter Notebook 13 - 
 Status: in progress
 
 This notebook include: 
--
+- Do the same thing as for notebook 12 but for each country
 -
 -
 
 
-## Jupyter Notebook 14 - 
+## Jupyter Notebook 14 - break_per_country
+Status: First version done
+
+This notebook include: 
+- Look at the data per country, just to get some facts
+- How many times a song appeard on top 200 in each country
+- Total number of times on top 200 for the song
+- Average number of times on top 200 for the song
+- What song is the most popular in what country
+- Plot some different songs appearance on top 200 per country.
+
+Why did I do this. It is because I am interested in seeing the differences between countries. 
+It also helps me to get more info to understand the different markets and there tastes. 
+
+
+## Jupyter Notebook 15 - comparing_models
 Status: in progress
 
 This notebook include: 
--
--
--
+- Take code from notebook 12 (remove stuff that do not need to be there)
+- Run the models 3 times with different random sees (24, 42, 57) to get 3 different R2-scores
+- Take the STD of the 3 R2-scores and make error bars for the different models.
 
 
-## Jupyter Notebook 15 - 
+## Jupyter Notebook 16 - visuals_final_data
 Status: in progress
 
 This notebook include: 
--
--
--
-
-
-## Jupyter Notebook 16 -
-Status: in progress
-
-This notebook include: 
--
+- Make some more plots based on the final data
 -
 -
 
