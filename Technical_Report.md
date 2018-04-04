@@ -113,48 +113,48 @@ Do the same thing as for Best model but split the data into data for each countr
 
 
 
-## Your choice of model and any hyperparameters, including what metric or metrics you use to determine a successful model.
+## What models did i choose and what hyperparameters, including what metric or metrics you use to determine a successful model.
 
 I knew that I needed to use a regressor of some kind. So I ended up using 5 different regressors in total. Before running the models I did use standard scaling in the case that scaling was needed. The Random Forest example do not need scaling before. 
 
 ### Linear Regression
-Hyper params: N/A
+Hyper params: N/A<BR />
 Evaluation metric: R2, MSE
 
 ### Lasso Regressor
-Hyper params 
-Tuned: alpha, selection
-Tuned with both GridSearchCV and RandomizedSearchCV
-Pre-chosen by me: random_state=24, fit_intercept=True, normalize=False, max_iter=1000
-For the rest the default values were used.
+Hyper params<BR /> 
+Tuned: alpha, selection<BR />
+Tuned with both GridSearchCV and RandomizedSearchCV<BR />
+Pre-chosen by me: random_state=24, fit_intercept=True, normalize=False, max_iter=1000<BR />
+For the rest the default values were used.<BR />
 Evaluation metric: R2, MSE
 
 ### Random Forest Regressor
-Hyper params
-Tuned: n_estimators, max_depth, max_features, bootstrap, verbose
-Tuned with RandomizedSearchCV (due to time restraints) 
-Pre-chosen by me: random_state=24
-For the rest the default values were used.
+Hyper params<BR />
+Tuned: n_estimators, max_depth, max_features, bootstrap, verbose<BR />
+Tuned with RandomizedSearchCV (due to time restraints)<BR /> 
+Pre-chosen by me: random_state=24<BR />
+For the rest the default values were used.<BR />
 Evaluation metric: R2, MSE
 
 ### Ada Boosting Regressor (base estimator = DecisionTreeRegressor)
-Hyper params
-Tuned: n_estimators, loss
-Tuned with RandomizedSearchCV (due to time restraints) 
-Pre-chosen by me: random_state=24
-For the rest the default values were used.
+Hyper params<BR />
+Tuned: n_estimators, loss<BR />
+Tuned with RandomizedSearchCV (due to time restraints)<BR />
+Pre-chosen by me: random_state=24<BR />
+For the rest the default values were used.<BR />
 Evaluation metric: R2, MSE
 
 ### Gradient Boosting Regressor
-Hyper params
-Tuned: n_estimators, loss, max_depth, max_features, verbose
-Tuned with RandomizedSearchCV (due to time restraints) 
-Pre-chosen by me: random_state=24
-For the rest the default values were used.
+Hyper params<BR />
+Tuned: n_estimators, loss, max_depth, max_features, verbose<BR />
+Tuned with RandomizedSearchCV (due to time restraints)<BR />
+Pre-chosen by me: random_state=24<BR />
+For the rest the default values were used.<BR />
 Evaluation metric: R2, MSE
 
 
-## Any future deployment strategies, additions of data, or modeling techniques you have yet to try?
+## Any future deployment strategies, additions of data, or modeling techniques have I yet to try?
 If there could have been more time I would have choosen to add in more data to try to see if it was possible
 to improve the quality of the predictions. If not I would probably change the target. To predict the mood 
 of a song seems to be hard. You do not have to use the mode to connect the song with an artist and the song 
