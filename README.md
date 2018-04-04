@@ -1,4 +1,4 @@
-# Capstone Project - The Mood of Music Around the Globe
+# Capstone Project - The Mood of Music
 The Capstone Project is my final project from my Data Science Immersive program experience at General Assembly. 
 Key element in the project had to be:
 - Develop an interesting question
@@ -57,6 +57,12 @@ For phase 2 I will have to look for other data sources. I have seen suitable dat
 - TextBlob 
 - GLM
 - Random Forest
+
+
+## Technical Report 
+Status: In progress
+
+- How to replicate the modeling process.
 
 
 ## Jupyter Notebook 1 - cleaning_top_songs
@@ -247,18 +253,55 @@ This notebook include:
 - Model LassoR for every country
 
 
+## Jupyter Notebook 12 - best_model
+Status: in progress
+
+This notebook include: 
+-
+-
+-
+
+
+## Jupyter Notebook 13 - 
+Status: in progress
+
+This notebook include: 
+-
+-
+-
+
+
+## Jupyter Notebook 14 - 
+Status: in progress
+
+This notebook include: 
+-
+-
+-
+
+
+## Jupyter Notebook 15 - 
+Status: in progress
+
+This notebook include: 
+-
+-
+-
+
+
+## Jupyter Notebook 16 -
+Status: in progress
+
+This notebook include: 
+-
+-
+-
+
 
 ## Jupyter Notebook n
-There will be more Jupyter Notebooks.
-
-I will have use columns that I discarded in the MVP and I also need to do some feature engineering.
-
-Good model = more NLP on the Track Lyrics
-Better model = countries
-Best model = also looking at number of streams and position, also looking at time on top list
-
 Then when we have the best model we can use our predictions and decide the mood of a country and the 
 mood of an artist. Then we can say what artist is suitable for what country.
+(Since low quality, maybe just for on eor two countries, depending on the individual performances)
 
 And in the end the concution and presentation.
 
