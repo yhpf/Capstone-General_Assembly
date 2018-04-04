@@ -109,7 +109,10 @@ Do the same thing as for Best model but split the data into data for each countr
 
 
 
-## How you operationalized your outcome variable? (including your justification)
+## How I operationalized my outcome variable?
+There are many ways to see if an artist will make it or break it in a new music market. I thought that looking 
+at the mood of the music would be a different approach to do this in. Compared for example to look at what 
+genre is popular in a country etc. I was also able to find data that suited my problem. 
 
 
 
@@ -159,4 +162,5 @@ If there could have been more time I would have choosen to add in more data to t
 to improve the quality of the predictions. If not I would probably change the target. To predict the mood 
 of a song seems to be hard. You do not have to use the mode to connect the song with an artist and the song 
 to a country for to see if the artist is a good fit with a country. There are probably better variables to 
-choose. I would definatly take some time to look at what those might be. 
+choose. I would definatly take some time to look at what those might be. Mayby go more traditional and look
+at variables such as what genre an artist belong to and what genre that are popular in a country.
