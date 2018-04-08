@@ -29,7 +29,6 @@ Determin the mood of an artist based on the songs made of the artist.
 Determin the mood of a country based on the songs popular in that country.
 
 
-
 ## Limitations
 - Top 10 music countries (exclude 2 Asian countries due to other signs in written language)
 - Only songs with roman characters (not asian signs for example)
@@ -293,13 +292,13 @@ change per song (per row): 'Position', 'Streams', 'Date', 'Year', 'Month', 'Day'
 - Evaluate<BR />
 
 
-## Jupyter Notebook 13 - 
+## Jupyter Notebook 13 - best_model_per_country
 Status: in progress
 
 This notebook include: 
-- Do the same thing as for notebook 12 but for each country
--
--
+- Do the same thing as for notebook 12 but for each country (do not make dummies for position,
+only use average position)
+- Make plot with best RF for each country and CountVec/TF-IDF
 
 
 ## Jupyter Notebook 14 - break_per_country
@@ -318,12 +317,12 @@ It also helps me to get more info to understand the different markets and there 
 
 
 ## Jupyter Notebook 15 - comparing_models
-Status: in progress
+Status: First version done
 
 This notebook include: 
 - Take code from notebook 12 (remove stuff that do not need to be there)
-- Run the models 3 times with different random sees (24, 42, 57) to get 3 different R2-scores
-- Take the STD of the 3 R2-scores and make error bars for the different models.
+- Run the models 3 times with different random sees (24, 45, 93) to get 3 different R2-scores
+- Take the STD of the 3 R2-scores and average R2-score, and make error bars for the different models.
 
 
 ## Jupyter Notebook 16 - visuals_final_data
@@ -338,9 +337,9 @@ This notebook include:
 ## Jupyter Notebook n
 Then when we have the best model we can use our predictions and decide the mood of a country and the 
 mood of an artist. Then we can say what artist is suitable for what country.
-(Since low quality, maybe just for on eor two countries, depending on the individual performances)
+(Since low quality, maybe just for one or two countries, depending on the individual performances)
 
-And in the end the concution and presentation.
+And in the end the conclution and presentation.
 
 I will update this document as the project progresses.
 
