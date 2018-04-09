@@ -8,32 +8,38 @@ Key element in the project had to be:
 
 
 ## Business case
-In what of the top 10 music countries should a record label release a new artist?<BR />
-Based on the mood of the music and what music that is popular in the countries.
-(On the top 10 music countries 2 of them are asian countries. Since it is challenging to work with asian signs compares to roman signs I have decided that it is only going to be the to 8 music countries. I will exclude the 
-2 asian countries.)
+In which of the top 10 music markets should a record label release a new artist?<BR />
+Based on the mood of the music and what music that is popular in the markets/countries.
 
 
 ## Description and target
 
 **TARGET / Y**
 Happy, Sad, Neutral comes from the column Valence in the dataframe. Originaly commes from the Spotify API.
-The variable goes from 0 to 1. It describing the musical positiveness of the track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry). I need to decide upon what interval levels I will use for happy, neutral and sad (for example 0 <= sad < 0.40, 0.40 <= neutral < 0.60, 0.60 <= happy < 1.0). Use mood of a song to get mood of artist and mood of country.
+The variable goes from 0 to 1. It describing the musical positiveness of the track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry). I need to decide upon what interval levels I will use for happy, neutral and sad.
+
+SAD: Prediction < 0.48
+HAPPY: Prediction > 0.52
+Neutral: What is left inbetween
+
+Use mood of a song to get mood of artist and mood of market/ountry.
 
 **Phase 1**
 MVP: I will try to predict if a song is happy, neutral or sad. 
-More improved models with more data.
 
 **Phase 2**
+More improved models with more data.
+
+**Phase 3**
 Determin the mood of an artist based on the songs made of the artist.
 Determin the mood of a country based on the songs popular in that country.
+Determin if an artist is a good fit for a market/country
 
 
 ## Limitations
-- Top 10 music countries (exclude 2 Asian countries due to other signs in written language)
-- Only songs with roman characters (not asian signs for example)
-- Assumption: All songs in toplist can be considered popular. If a song is not in toplist, it is not popular.
+- Top 10 music markets (exclude 2 Asian countries due to other signs in written language -> Top 8)
 - Only look at data for 2017.
+- Assumption: All songs in toplist can be considered popular. If a song is not in toplist, it is not popular.
 
 
 ## The Data
@@ -51,20 +57,21 @@ https://docs.genius.com/
 - Lyrics manually added.
 
 
-## Tools (needs to be completed)
-- TextBlob
-- NLP
-- Linear Regressor
-- Lasso Regressor
+## Some Tools and Methods used
+- Sentiment Analysis in TextBlob (NLP)
+- Scikit learn built in working with text functions: CountVectorizer and TfidfVectorizer (NLP)
+- Linear Regerssion
+- Lasso Regressor 
 - Random Forest Regressor
 - Ada Boosting Regressor
 - Gradient Boosting Regressor
-- GridSearchCV
-- RandomizedSearchCV
+- GridSearchCV (tuning hyperparameters)
+- RandomizedSearchCV (tuning hyperparameters)
+- Standard Scaler (Feature scaling) (normalization)
 
 
 ## Technical Report (separat md-file)
-Status: In progress
+Status: first version done
 
 How to replicate the modeling process.
 1. How did I acquired my data.
@@ -255,6 +262,7 @@ This notebook include:
 
 
 ## Jupyter Notebook 11 - better_model
+This is like the good model, but brooken down for each market/country.
 Status: first version done
 
 This notebook include: 
@@ -302,6 +310,7 @@ only use average position)
 
 
 ## Jupyter Notebook 14 - break_per_country
+Breakdown of the data per market/country.
 Status: First version done
 
 This notebook include: 
@@ -317,6 +326,7 @@ It also helps me to get more info to understand the different markets and there 
 
 
 ## Jupyter Notebook 15 - comparing_models
+Compairing the models from Best models in Notebook 12.
 Status: First version done
 
 This notebook include: 
@@ -326,27 +336,32 @@ This notebook include:
 
 
 ## Jupyter Notebook 16 - visuals_final_data
-Status: in progress
+Status: First version done
 
 This notebook include: 
-- Make some more plots based on the final data
--
--
+- Make some more plots based on the final data (focus CountVec training set)
 
 
-## Jupyter Notebook n
-Then when we have the best model we can use our predictions and decide the mood of a country and the 
-mood of an artist. Then we can say what artist is suitable for what country.
-(Since low quality, maybe just for one or two countries, depending on the individual performances)
+## Conclutions and final thoughts
+It turned out to be hard to predict the mood of a song to use to find the best fit between an artist and 
+a market. In total 23% of the variance for all markets together could be explained by the best model. When 
+looking at the markets/countries market by market 3 markets had more than 30% but one had only nearly 15%.
+No pairing between artist and market/country possible due to the low explanation rate.
 
-And in the end the conclution and presentation.
+I believe that it is better to stick with more traditional ways of looking at if an artist is a good
+fit for a market. For example looking at the genre of the artist and if the genre is popular in the market.
 
-I will update this document as the project progresses.
+However I learnt a lot about music popularity in the largest music markets and I want to focus more on the 
+difference between the markets and how you best can make good use of that knowledge as a company connected 
+to the music industry.
+
+
+## 2 Google slide documents
+Status: Will be added to repo shortly 
+
+- 4 min non-technical presentation
+- 10 min technical presentation
 
 
 ## .gitignore
 This prevents checkpoints and csv-files from being commited and pushed to remote repo.
-
-## This is a working copy
-The project is still active and not finnished yet.
-So please keep that in mind. 
