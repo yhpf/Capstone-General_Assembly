@@ -357,7 +357,7 @@ to the music industry.
 
 
 ## 2 Google slide documents
-Status: Will be added to repo shortly 
+Status: Done
 
 - 4 min non-technical presentation
 - 10 min technical presentation
